@@ -13,7 +13,6 @@ public class TeamsController extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
-
     League league = League.getLeague();
     List<Team> teams = league.getTeams();
 
@@ -21,7 +20,7 @@ public class TeamsController extends HttpServlet {
       req.setAttribute("teams", teams);
       RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/teams/index.jsp");
       requestDispatcher.forward(req, resp);
-    } else {
+    } else if (req.getServletPath().equals("/team")) {
       String teamIndexString = req.getParameter("teamIndex");
       int index = Integer.parseInt(teamIndexString);
 
