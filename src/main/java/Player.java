@@ -11,19 +11,19 @@ public class Player {
 
   }
 
-//  public String getName() {
-//    return name;
-//  }
+  public String getName() {
+    return name;
+  }
 
-//  private void setName(String name) {
-//    this.name = name;
-//  }
+  private void setName(String name) {
+    this.name = name;
+  }
 
-//  public String getPosition() {
-//    return position;
-//  }
+  public String getPosition() {
+    return position;
+  }
 
-//  private void setPosition(String position) {
-//    this.position = position;
-//  }
+  private void setPosition(String position) {
+    this.position = position;
+  }
 }
