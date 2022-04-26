@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = {"/", "/team"})
+@WebServlet(urlPatterns = {"", "/teams"})
 public class TeamsController extends HttpServlet {
 
   @Override
@@ -17,11 +17,11 @@ public class TeamsController extends HttpServlet {
     League league = League.getLeague();
     List<Team> teams = league.getTeams();
 
-    if (req.getServletPath().equals("/")) {
+    if (req.getServletPath().equals("")) {
       req.setAttribute("teams", teams);
       RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/teams/index.jsp");
       requestDispatcher.forward(req, resp);
-    } else {
+    } else if (req.getServletPath().equals("/teams")) {
       String teamIndexString = req.getParameter("teamIndex");
       int index = Integer.parseInt(teamIndexString);
 
