@@ -30,7 +30,7 @@ So that I can learn more about them
 Acceptance Criteria:
 
 - When I navigate to `/` I get an unordered list of team names from `League`
-- Each team name is a link that sends me to `/team?teamIndex=<index in array>`
+- Each team name is a link that sends me to `/teams?teamIndex=<index in array>`
 
 ### View Teams
 
@@ -42,11 +42,12 @@ So that I can learn more about my favorite team
 
 Acceptance Criteria:
 
-- When I navigate to `/team?teamIndex=<index in array>`, I receive details about the team located at that index in the League's list of teams
+- When I navigate to `/teams?teamIndex=<index in array>`, I receive details about the team located at that index in the League's list of teams
 - I should see the team's name, as well as a list of all of the players and their correlating positions
 - If I attempt to access an index that is out of range for the list of teams, I receive a 404
 
 ### Add a team
+
 ```no-highlight
 As a curling fan
 I want to add a player
@@ -54,10 +55,10 @@ So that I can expand my teams in the future
 ```
 
 Acceptance Criteria:
-- When I navigate to `/player/new/`, I am presented with a form to take in Player data - name and position
+
+- When I navigate to `/players/new/`, I am presented with a form to take in Player data - name and position
 - Once I submit the form, I process the data, and then I am presented with a Player show page shows the Player information that I just submitted
 - The data I submitted via the form will not be persisted or saved, so I will not see it when I navigate to `/` or in any teams
-
 
 ## Non-Core User Stories
 
@@ -72,7 +73,7 @@ So that I can learn more about the players that occupy them
 Acceptance Criteria:
 
 - When I navigate to `/positions`, I can see an unordered list of all positions in the game of curling.
-- Each position should be a link that sends me to `/position?name=<position-name>`
+- Each position should be a link that sends me to `/positions?name=<position-name>`
 
 ### List Players in Position
 
@@ -84,7 +85,7 @@ So I can study the matchups
 
 Acceptance Criteria:
 
-- When I navigate to `/position?name=<position-name>`, I can see the position name, as well as all of the players that play the position in the league.
+- When I navigate to `/positions?name=<position-name>`, I can see the position name, as well as all of the players that play the position in the league.
 - The player's team should also be listed in a way that helps me understand what team each player is on
 
 **You can add methods to the supplied classes, but you may not modify the data provided.**
